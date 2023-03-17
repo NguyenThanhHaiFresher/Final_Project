@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "105666280700",
+    "project_id": "light-novel-project",
+    "storage_bucket": "light-novel-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:105666280700:android:f4722254bb8642da29eb79",
+        "android_client_info": {
+          "package_name": "com.example.final_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "105666280700-96d3vhalu49s0pvendma4f0244lk7q3k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWAjy7zql-WV_Yx9ZalzRS5pwCM5qAWhI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "105666280700-96d3vhalu49s0pvendma4f0244lk7q3k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

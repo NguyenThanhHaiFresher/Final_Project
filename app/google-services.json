@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "105666280700",
+    "firebase_url": "https://light-novel-project-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "light-novel-project",
     "storage_bucket": "light-novel-project.appspot.com"
   },

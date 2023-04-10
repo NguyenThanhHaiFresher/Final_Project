@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main"
+    tools:context=".UserDashboard">
+
+    <TextView
+        android:id="@+id/Admin_name"
+        android:layout_width="245dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
+        android:text="Admin name"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.234"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Email"
+        android:layout_width="251dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="4dp"
+        android:text="Email"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.233"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Admin_name" />
+
+    <ImageButton
+        android:id="@+id/sign_out_btn"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_logout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.589"
+        app:layout_constraintStart_toEndOf="@+id/Admin_name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/add_category_btn"
+        android:layout_width="255dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="44dp"
+        android:background="@drawable/blue_btn"
+        android:text="Add category +"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.294"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/add_pdf_btn"
+        android:layout_width="60dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="44dp"
+        android:background="@drawable/blue_btn"
+        android:src="@drawable/ic_baseline_picture_as_pdf_24"
+        android:translationZ="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/add_category_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintStart_toEndOf="@+id/add_category_btn"
+        app:layout_constraintTop_toTopOf="@+id/add_category_btn"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/search_bar"
+        android:layout_width="337dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/search_box"
+        android:drawableStart="@drawable/ic_search"
+        android:ems="10"
+        android:hint="Search"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Email" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/CategoriesRV"
+        android:layout_width="409dp"
+        android:layout_height="649dp"
+        android:layout_above="@+id/add_category_btn"
+        android:layout_below="@+id/search_bar"
+        android:layout_marginTop="8dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_bar"
+        tools:listitem="@layout/row_category" />
+</androidx.constraintlayout.widget.ConstraintLayout>

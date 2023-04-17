@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/main"
-    tools:context=".UserDashboard">
+    tools:context=".AdminDashboard">
 
     <TextView
         android:id="@+id/Admin_name"
@@ -54,7 +54,7 @@
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.294"
+        app:layout_constraintHorizontal_bias="0.185"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
@@ -90,8 +90,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/CategoriesRV"
-        android:layout_width="409dp"
-        android:layout_height="649dp"
+        android:layout_width="357dp"
+        android:layout_height="648dp"
         android:layout_above="@+id/add_category_btn"
         android:layout_below="@+id/search_bar"
         android:layout_marginTop="8dp"

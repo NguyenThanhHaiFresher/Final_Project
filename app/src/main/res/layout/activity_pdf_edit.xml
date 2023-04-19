@@ -5,43 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/main"
-    tools:context=".AddPDF">
-
-    <TextView
-        android:id="@+id/Choose_category"
-        android:layout_width="262dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="40dp"
-        android:hint="Choose Category"
-        android:inputType="textPersonName"
-        android:textSize="20dp"
-        android:padding="10dp"
-        android:background="@drawable/box"
-        android:drawableEnd="@drawable/ic_arrow_drop_down"
-        app:layout_constraintEnd_toEndOf="@+id/Book_Description"
-        app:layout_constraintStart_toStartOf="@+id/Book_Description"
-        app:layout_constraintTop_toBottomOf="@+id/Book_Description" />
-
-    <EditText
-        android:id="@+id/Book_Description"
-        android:layout_width="262dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="40dp"
-        android:ems="10"
-        android:padding="10dp"
-        android:background="@drawable/box"
-        android:hint="Book Description"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/Book_Title"
-        app:layout_constraintStart_toStartOf="@+id/Book_Title"
-        app:layout_constraintTop_toBottomOf="@+id/Book_Title" />
+    tools:context=".PdfEditActivity">
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Add PDF"
+        android:text="Edit"
         android:textColor="#FFFFFF"
         android:textSize="35dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,7 +32,7 @@
         app:srcCompat="@drawable/ic_back_arrow" />
 
     <EditText
-        android:id="@+id/Book_Title"
+        android:id="@+id/titleEt"
         android:layout_width="262dp"
         android:layout_height="54dp"
         android:layout_marginTop="56dp"
@@ -75,27 +46,45 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
+    <EditText
+        android:id="@+id/descriptionEt"
+        android:layout_width="262dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:padding="10dp"
+        android:background="@drawable/box"
+        android:hint="Book Description"
+        android:inputType="textMultiLine|textCapSentences"
+        app:layout_constraintEnd_toEndOf="@+id/titleEt"
+        app:layout_constraintStart_toStartOf="@+id/titleEt"
+        app:layout_constraintTop_toBottomOf="@+id/titleEt" />
+
+    <TextView
+        android:id="@+id/categoryTv"
+        android:layout_width="262dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="40dp"
+        android:hint="Choose Category"
+        android:inputType="textPersonName"
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:background="@drawable/box"
+        android:drawableEnd="@drawable/ic_arrow_drop_down"
+        app:layout_constraintEnd_toEndOf="@+id/descriptionEt"
+        app:layout_constraintStart_toStartOf="@+id/descriptionEt"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionEt" />
+
     <Button
-        android:id="@+id/upload_pdf_btn"
+        android:id="@+id/submitBtn"
         android:layout_width="262dp"
         android:layout_height="54dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/blue_btn"
-        android:text="UPLOAD"
+        android:text="UPDATE"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Choose_category" />
+        app:layout_constraintTop_toBottomOf="@+id/categoryTv" />
 
-    <ImageButton
-        android:id="@+id/choose_pdf_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.068"
-        app:layout_constraintStart_toEndOf="@+id/textView8"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_file_attach" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,7 @@
 package com.example.final_project
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -59,6 +60,8 @@ class AdapterPdfAdmin: RecyclerView.Adapter<AdapterPdfAdmin.HolderPdfAdmin>, Fil
             moreOptionDialog(model, holder)
         }
 
+
+
     }
 
     private fun moreOptionDialog(model: ModelPdf, holder: AdapterPdfAdmin.HolderPdfAdmin) {
@@ -69,6 +72,18 @@ class AdapterPdfAdmin: RecyclerView.Adapter<AdapterPdfAdmin.HolderPdfAdmin>, Fil
         val options = arrayOf("Edit", "Delete")
 
         val builder = AlertDialog.Builder(context)
+        builder.setTitle("Choose Option")
+            .setItems(options){dialog, position ->
+                if (position == 0){
+                    val intent = Intent(context, PdfEditActivity::class.java)
+                    intent.putExtra("bookId",bookId)
+                    context.startActivity(intent)
+                }
+                else if (position == 1){
+                    MyApplication.deleteBook(context, bookId, bookUrl, bookTitle)
+                }
+            }
+            .show()
     }
 
     override fun getItemCount(): Int {
